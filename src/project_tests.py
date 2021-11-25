@@ -2,8 +2,8 @@ import pandas as pd
 import numpy as np
 import pickle
 
-df = pd.read_csv('data/user-item-interactions.csv')
-df_content = pd.read_csv('data/articles_community.csv')
+df = pd.read_csv('../data/user-item-interactions.csv')
+df_content = pd.read_csv('../data/articles_community.csv')
 del df['Unnamed: 0']
 del df_content['Unnamed: 0']
 
@@ -36,7 +36,7 @@ def sol_2_test(top_articles):
     
     checks = ['top_5', 'top_10', 'top_20']
     for idx, file in enumerate(checks):
-        if set(eval(file)) == set(pickle.load(open( "{}.p".format(file), "rb" ))):
+        if set(eval(file)) == set(pickle.load(open( "../test/{}.p".format(file), "rb" ))):
             print("Your {} looks like the solution list! Nice job.".format(file))
         else:
             print("Oops! The {} list doesn't look how we expected.  Try again.".format(file))
@@ -67,12 +67,12 @@ def sol_4_test(sol_4_dict):
     sol_4_dict_1 = {
     'How many users can we make predictions for in the test set?': c, 
     'How many users in the test set are we not able to make predictions for because of the cold start problem?': a, 
-    'How many movies can we make predictions for in the test set?': b,
-    'How many movies in the test set are we not able to make predictions for because of the cold start problem?': d
+    'How many articles can we make predictions for in the test set?': b,
+    'How many articles in the test set are we not able to make predictions for because of the cold start problem?': d
     }
     
     if sol_4_dict == sol_4_dict_1:
-        print("Awesome job!  That's right!  All of the test movies are in the training data, but there are only 20 test users that were also in the training set.  All of the other users that are in the test set we have no data on.  Therefore, we cannot make predictions for these users using SVD.")
+        print("Awesome job!  That's right!  All of the test articles are in the training data, but there are only 20 test users that were also in the training set.  All of the other users that are in the test set we have no data on.  Therefore, we cannot make predictions for these users using SVD.")
     else:
         for k, v in sol_4_dict_1.items():
             if sol_4_dict_1[k] != sol_4_dict[k]:
