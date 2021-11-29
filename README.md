@@ -5,7 +5,7 @@
 - [Project Components](#Project-Components)
 
 ## Project Overview<a name="Project-Overview"></a>
-The **Recommendations with IBM** is a part of the Udacity Data Science Nanodegree Program in collaboration with IBM who provides a large number of anonymised data of interactions between all of different kinds of article in the community and users from the IBM Watson Studio platform. The IBM is hoping to use this project to build an application for better understanding their users' tastes in articles and making personalised experience for individual user on articles recommendations.
+The **Recommendations with IBM** is a part of the Udacity Data Science Nanodegree Program in collaboration with IBM. The partner provides a large number of anonymised data of interactions between all of different kinds of article in the community and existing users on the IBM Watson Studio platform. IBM is hoping to use this project to build an application for better understanding their users' tastes in articles and making personalised experience for individual user on articles recommendations.
 
 ## Installation<a name="Installation"></a>
 The following packages and versions are used in this jupyter notebook. Any recent versions should work. 
@@ -37,7 +37,6 @@ The following packages and versions are used in this jupyter notebook. Any recen
 │   ├── top_10.p---------------------------------# pickle file with top 10 articles interacted
 │   ├── top_20.p---------------------------------# pickle file with top 20 articles interacted
 │   └── user_item_matrix.p-----------------------# pickle file with user-item interaction matrix saved
-│    
 ```
 
 ## Project Components<a name="Project-Components"></a>
